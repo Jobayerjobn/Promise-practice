@@ -318,33 +318,33 @@
 //    });
 
 
- async function myName() {
+//  async function myName() {
 
-    return 'hello';
-};
-console.log(myName());
-
-
-const name1 = Promise.resolve('hello how are you?');
+//     return 'hello';
+// };
+// console.log(myName());
 
 
-console.log(name1);
+// const name1 = Promise.resolve('hello how are you?');
 
-const hello = 'Jobayer';
 
-const createPromise = new Promise(function(resolve, reject) {
-   if(hello = 'Jobayer') {
-    const obj = {
-        name: 'Joban',
-        age: 19,
-        email: 'jabayerjoban0048@gmail.com',
-    };
-    resolve(obj)
-   }else {
+// console.log(name1);
 
-    reject(new Error('Something is wrong happend'));
-   }
-});
+// const hello = 'Jobayer';
+
+// const createPromise = new Promise(function(resolve, reject) {
+//    if(hello = 'Jobayer') {
+//     const obj = {
+//         name: 'Joban',
+//         age: 19,
+//         email: 'jabayerjoban0048@gmail.com',
+//     };
+//     resolve(obj)
+//    }else {
+
+//     reject(new Error('Something is wrong happend'));
+//    }
+// });
 
 // createPromise
 //   .then((err) => {
@@ -359,13 +359,184 @@ const createPromise = new Promise(function(resolve, reject) {
 // console.log(promise);
 
 
-function promise() {
-    return Promise.resolved('Hello Jobayer how are you?');
-};
-promise
+// function promise() {
+//     return Promise.resolved('Hello Jobayer how are you?');
+// };
+// promise
 
-     .than((res) => {
-        console.log(res) 
-     }).catch((err) => {
-        console.log(err);
-     });
+//      .then((res) => {
+//         console.log(res) 
+//      }).catch((err) => {
+//         console.log(err);
+//      });
+
+
+// practice callBack function 
+
+// function callBack(){
+//    setTimeout(function() {
+//       console.log('Hello javascript');
+
+//    },3000)
+// };
+
+// function newFunction(){
+
+//    console.log('Hello callBack function');
+// }
+
+// callBack();
+// newFunction();
+// console.log('Hello how are you?');
+
+
+//  Make a callBack function;
+
+// const callBack = (callBack) => {
+
+//    setTimeout(() => {
+
+//       console.log('hello Jobayer');
+//       callBack();
+
+//    }, 3000)
+// };
+
+// const noun = () => {
+
+// console.log('oh, Jobayer I am sorry ')
+
+// }
+// callBack(noun);
+
+
+
+// const functionCAll = (callBack) => {
+
+//    setTimeout(() => {
+
+//       console.log('Thats the beauty of human')
+//       callBack();
+
+//    }, 3000)
+// };
+
+// functionCAll(() => {
+//    console.log('hello Jobayer');
+// })
+
+
+// const Data = getSomeData('https:// aremoteserver.com');
+// console.log(Data);
+
+// getSomeData('https:// aremoteserver.com', (Data) => {
+//    console.log(Data);
+
+// });
+
+
+// Promise;
+//  Create a new Promise;
+
+// const promise = (control) => {
+//    return new Promise((resolve, reject) => {
+//       setTimeout(() =>{
+//          if(control){
+//             resolve();
+//          }else{
+//             reject();
+//          }
+//       }, 3000)
+//    })
+// };
+
+
+// promise(false).then(() => {
+//    console.log('promise is success');
+// }).catch(() => {
+//    console.log('Promise is not success');
+// });
+
+
+//  Handle Promise;
+
+// promise.then((res) => {
+//    console.log('Promise is success')
+// }).catch((err) => {
+//    console.log('')
+// })
+// const user = new Promise(function(resolve, reject) {
+//    let control = false; 
+//   setTimeout(() => {
+//    if(control) {
+//       resolve('hello Promise')
+
+//    }else{
+
+//       reject('error');
+
+//    }
+
+//   }, 2000)
+// })
+
+// user
+//    .then((data) => {
+//       console.log(data);
+//    }).catch((err) => {
+//       console.log(err);
+//    })
+
+// const promise = (control) => {
+//    return new Promise((resolve, reject) =>{
+//       setTimeout(() => {
+//          if(control) {
+//             resolve('Hello Promise');
+//          }else{
+//             reject(new Error('just pick up a  error'));
+//          }
+//       }, 2000)
+//    })
+// };
+
+// promise(false) 
+//    .then((res) => {
+//       console.log(res);
+//    }).catch((err) => {
+//       console.log(err.message)
+//    });
+const promise1 = new Promise((resolve , reject) => {
+   setTimeout(() => {
+      if(true) {
+         resolve('Promise done');
+      }else{
+         reject('Promise has been failed');
+      }
+   }, 2000)
+});
+ 
+
+const promise2 = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if(false) {
+         resolve('hello Jobayr');
+      }else{
+         reject('hello Joban')
+      }
+    }, 2000)
+});
+
+// Promise.all([promise1, promise2])
+//      .then((res) => {
+//       console.log(res);
+//      }).catch((err) => {
+//       console.log(err);
+//      });
+
+const promiseHandle = async () => {
+   
+   const data = await Promise.all([promise1, promise2]);
+   console.log(data);
+
+};
+promiseHandle();
